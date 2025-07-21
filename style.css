@@ -1,0 +1,378 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #030303;
+  color: #f1f1f1;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Escurecimento extra sutil */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  z-index: -1;
+}
+
+/* Container geral */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(to right, #120024, #1e0033);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #bb33ff;
+  text-shadow: 0 0 10px #bb33ff70;
+  font-weight: bold;
+}
+
+/* Seção Introdução */
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+  text-align: center;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 280px;
+  padding: 10px;
+}
+
+.intro-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #bb33ff;
+  text-shadow: 0 0 12px #bb33ffaa;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Imagem de perfil */
+/* Imagem de perfil maior */
+.intro-photo {
+  width: 250px;
+  height: 250px;
+  margin: 30px auto;
+  border-radius: 70%;
+  overflow: hidden;
+  border: 4px solid #bb33ff;
+  box-shadow: 0 0 20px #bb33ff88;
+  transition: box-shadow 0.4s ease;
+}
+
+.intro-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.intro-photo:hover {
+  box-shadow: 0 0 35px #bb33ffcc;
+}
+
+.intro-photo:hover img {
+  transform: scale(1.07);
+}
+
+}
+
+.intro-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.intro-photo:hover {
+  box-shadow: 0 0 35px #bb33ffcc;
+}
+
+.intro-photo:hover img {
+  transform: scale(1.07);
+}
+
+/* Sobre Mim, Formação & Experiência, Meus Objetivos - caixas roxas */
+.about-section,
+.experience-section,
+.goals-section {
+  background: linear-gradient(145deg, #2c003f, #180022);
+  border-radius: 20px;
+  padding: 30px 25px;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  box-shadow: 0 8px 16px rgba(162, 89, 255, 0.2);
+  color: #ddd;
+  line-height: 1.6;
+  border: 1px solid #a259ff70;
+  transition: box-shadow 0.3s ease;
+}
+
+.about-section:hover,
+.experience-section:hover,
+.goals-section:hover {
+  box-shadow: 0 12px 24px rgba(162, 89, 255, 0.4);
+}
+
+/* Títulos roxo neon para essas seções */
+.about-section h2,
+.experience-section h2,
+.goals-section h2 {
+  color: #bb33ff;
+  text-shadow: 0 0 10px #bb33ffaa;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+/* Parágrafos e lista */
+.about-section p,
+.goals-section p {
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+}
+
+.experience-section ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.experience-section ul li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* Projetos */
+.projects {
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+}
+
+.projects h2 {
+  font-size: 2.8rem;
+  color: #a259ff;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 10px #a259ffcc;
+}
+
+.projects h2::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background-color: #a259ff;
+  bottom: -10px;
+  left: 20%;
+  border-radius: 2px;
+  animation: underline 2s ease-in-out infinite;
+}
+
+@keyframes underline {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(0.6); }
+  100% { transform: scaleX(1); }
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: linear-gradient(145deg, #2c003f, #180022);
+  padding: 30px;
+  width: 280px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(162, 89, 255, 0.2);
+  border: 1px solid #a259ff50;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(162, 89, 255, 0.4);
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #a259ff;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+  color: #ffffff;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+/* Contato */
+.contact-section {
+  max-width: 400px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-link {
+  background-color: #bb33ff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  background-color: #8e2de2;
+}
+
+/* Botão currículo */
+.btn-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.btn-cv {
+  background-color: #bb33ff;
+  color: white;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #bb33ff80;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-cv:hover {
+  background-color: #8e2de2;
+  transform: scale(1.05);
+}
+
+/* Skills */
+.skills {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  color: #ddd;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.skills-list li {
+  background-color: #2a2a2a;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Ferramentas só GitHub e JavaScript */
+.tech-section {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  color: #ddd;
+}
+
+.tech-icons {
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+.tech-icons i {
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.tech-icons i:hover {
+  color: #bb33ff;
+  transform: scale(1.3);
+}
+
+/* Footer */
+footer {
+  background-color: #1e0033;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+
